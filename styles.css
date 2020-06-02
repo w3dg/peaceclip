@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(./fonts/Montserrat-Medium.ttf);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: Montserrat !important;
+  overflow: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a593ff;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fafafa;
+}

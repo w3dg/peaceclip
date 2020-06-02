@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
+  "name": "PeaceClip",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Peacefully copy things to clipboard without the fear of losing them ever again",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -9,14 +9,12 @@
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Clipboard Manager"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Debopam Gupta",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^9.0.0"
-  }
+  },
+  "dependencies": {}
 }
