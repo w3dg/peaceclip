@@ -10,11 +10,17 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 400,
     height: 400,
+    frame: false,
+    icon: "./yoga-pose.png",
+    maximizable: false,
+    minimizable: false,
+    movable: false,
+    resizable: false,
+    skipTaskbar: true,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       nodeIntegration: true,
     },
-    frame: false,
   });
 
   mainWindow.hide();
@@ -22,10 +28,11 @@ function createWindow() {
   mainWindow.loadFile("index.html");
 
   tray.on("click", () => {
-    const bounds = tray.getBounds();
-
     mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show();
-    mainWindow.setPosition(bounds.x - 200, bounds.y - 400);
+  });
+
+  mainWindow.on("blur", () => {
+    mainWindow.hide();
   });
 }
 
