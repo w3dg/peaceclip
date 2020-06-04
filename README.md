@@ -2,7 +2,7 @@
 
 An electron desktop app which help you to save a history of your clipboard so that from now on you can find stuff copied years ago even today.
 
-Inspired By [Coding Garden's](https://www.twitch.tv/codinggarden) [project](https://github.com/CodingGarden/clipboard-elephant)
+Inspired By [Coding Garden's project](https://github.com/CodingGarden/clipboard-elephant)
 
 ## To develop locally
 
@@ -39,10 +39,12 @@ npm start
 - [x] Listen for clipboard changes every ~1-2s
 - [x] Add things in clipboard to the history
 
-- [ ] Move History to [nedb](https://github.com/louischatriot/nedb)
+- [x] Move History to [nedb](https://github.com/louischatriot/nedb)
 - [ ] CRUD (create, read, update, delete) from nedb
 
-  - [ ] Make it efficient like push things from history to nedb every x seconds and query for things on start etc.
+  - [ ] Make it efficient like
+  - [x] push things from history to nedb every x seconds (30 mins in this case.)
+  - [ ] query for things on start etc.
   - [ ] Make a `clear-all` button (wipes the db)
 
 - [ ] When user clicks on the item copy it to their clipboard. and update the view as well.
