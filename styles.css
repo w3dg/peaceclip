@@ -23,10 +23,12 @@ pre {
 
 .panel-block {
   align-items: flex-start;
+  word-wrap: break-word;
 }
 
 .clip-item {
   background: #e9e9e9;
+  word-wrap: break-word;
 }
 
 .clip-item:nth-child(odd) {

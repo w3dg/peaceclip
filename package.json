@@ -1,5 +1,5 @@
 {
-  "name": "PeaceClip",
+  "name": "peaceclip",
   "version": "1.0.0",
   "description": "Peacefully copy things to clipboard without the fear of losing them ever again",
   "main": "main.js",
@@ -16,5 +16,7 @@
   "devDependencies": {
     "electron": "^9.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "nedb": "^1.8.0"
+  }
 }
