@@ -10,11 +10,14 @@
   <body>
     <main id="app">
       <article class="panel is-primary">
-        <p class="panel-heading">
+        <p class="panel-heading has-text-centered">
           {{title}}
         </p>
-        <div class="panel-block is-active clip-item" v-for="item in history">
-          {{" " + item}}
+        <div
+          class="panel-block is-active clip-item"
+          v-for="item in clipHistory"
+        >
+          {{item}}
         </div>
       </article>
     </main>
