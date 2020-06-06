@@ -4,23 +4,27 @@ const Datastore = require("nedb"),
 
 const app = new Vue({
   el: "#app",
-  data: {
-    title: "📎 Peace Clip",
-    clipHistory: [],
+  data: function () {
+    return {
+      title: "📎 Peace Clip",
+      clipHistory: [],
+    };
   },
-  mounted() {
-    db.find({}, function (err, docs) {
+  created() {
+    console.log(this.clipHistory);
+    db.find({}, (err, docs) => {
       const { data } = docs[docs.length - 1];
-      console.log(data);
       for (let i = 0; i < data.length; i++) {
-        console.log("WAT", data[i]);
-        // this.clipHhistory.push(data[i]);
-        console.log(i);
+        if (data[i] != "") {
+          this.clipHistory.push(data[i]);
+        }
       }
     });
+  },
+  mounted() {
+    setTimeout(setInterval(this.checkClipboard, 1000), 5000);
     // setInterval(this.insertHistorytoDB, 1800000 );
     setInterval(this.insertHistorytoDB, 10000);
-    setInterval(this.checkClipboard, 1000);
   },
   methods: {
     checkClipboard() {
