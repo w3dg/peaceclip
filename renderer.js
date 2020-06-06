@@ -50,7 +50,10 @@ const app = new Vue({
       db.insert({ data: this.clipHistory }, function (err, newDocs) {});
     },
     itemClicked(item) {
+      const index = this.clipHistory.indexOf(item);
+      this.clipHistory.splice(index, 1);
       clipboard.writeText(item);
+      window.scrollTo(0, 0);
     },
   },
 });

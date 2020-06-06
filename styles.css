@@ -1,11 +1,12 @@
 @font-face {
   font-family: Montserrat;
-  src: url(./fonts/Montserrat-Medium.ttf);
+  src: url(./fonts/Montserrat-Light.ttf);
 }
 
 html {
   overflow: auto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   min-width: 100vw;
