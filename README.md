@@ -42,9 +42,8 @@ npm start
 - [x] Move History to [nedb](https://github.com/louischatriot/nedb)
 - [ ] CRUD (create, read, update, delete) from nedb
 
-  - [ ] Make it efficient like
   - [x] push things from history to nedb every x seconds (30 mins in this case.)
-  - [ ] query for things on start etc.
+  - [x] query for things on start etc.
   - [ ] Make a `clear-all` button (wipes the db)
 
 - [ ] When user clicks on the item copy it to their clipboard. and update the view as well.
