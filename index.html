@@ -15,7 +15,8 @@
         </p>
         <div
           class="panel-block is-active clip-item"
-          v-for="item in clipHistory"
+          v-for="item in historyReversed"
+          @click="itemClicked(item)"
         >
           {{item}}
         </div>

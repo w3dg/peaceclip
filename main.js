@@ -24,7 +24,6 @@ function createWindow() {
   });
   mainWindow.webContents.openDevTools();
   mainWindow.hide();
-  // and load the index.html of the app.
   mainWindow.loadFile("index.html");
 
   tray.on("click", () => {

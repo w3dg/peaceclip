@@ -10,21 +10,33 @@ const app = new Vue({
       clipHistory: [],
     };
   },
+  computed: {
+    historyReversed() {
+      return this.clipHistory.slice().reverse();
+    },
+  },
   created() {
-    console.log(this.clipHistory);
     db.find({}, (err, docs) => {
-      const { data } = docs[docs.length - 1];
-      for (let i = 0; i < data.length; i++) {
-        if (data[i] != "") {
-          this.clipHistory.push(data[i]);
+      if (err) {
+        console.error(err);
+      }
+      if (docs.length > 1) {
+        const { data } = docs[docs.length - 1];
+        for (let i = 0; i < data.length; i++) {
+          if (data[i] != "") {
+            this.clipHistory.push(data[i]);
+            console.log(data[i]);
+          }
         }
       }
     });
   },
   mounted() {
-    setTimeout(setInterval(this.checkClipboard, 1000), 5000);
+    // in main app
     // setInterval(this.insertHistorytoDB, 1800000 );
+    // in dev
     setInterval(this.insertHistorytoDB, 10000);
+    setInterval(this.checkClipboard, 1000);
   },
   methods: {
     checkClipboard() {
@@ -36,6 +48,9 @@ const app = new Vue({
 
     insertHistorytoDB() {
       db.insert({ data: this.clipHistory }, function (err, newDocs) {});
+    },
+    itemClicked(item) {
+      clipboard.writeText(item);
     },
   },
 });
