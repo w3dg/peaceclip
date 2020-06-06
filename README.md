@@ -46,7 +46,7 @@ npm start
   - [x] query for things on start etc.
   - [ ] Make a `clear-all` button (wipes the db)
 
-- [ ] When user clicks on the item copy it to their clipboard. and update the view as well.
+- [x] When user clicks on the item copy it to their clipboard. and update the view as well.
 - [ ] Make it EFFICIENT ON RESOURCES!!
 
 ## STRETCH
