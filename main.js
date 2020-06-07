@@ -11,7 +11,7 @@ function createWindow() {
     width: 400,
     height: 400,
     frame: false,
-    icon: "./yoga-pose.png",
+    icon: "./clipboard.png",
     maximizable: false,
     minimizable: false,
     movable: false,
@@ -39,7 +39,7 @@ function createWindow() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  tray = new Tray("./yoga-pose.png");
+  tray = new Tray("./clipboard.png");
   tray.setToolTip("peaceclip");
   createWindow();
   app.on("activate", function () {
