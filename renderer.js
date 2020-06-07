@@ -6,7 +6,7 @@ const app = new Vue({
   el: "#app",
   data: function () {
     return {
-      title: "📎 Peace Clip",
+      title: "Peace Clip",
       clipHistory: [],
     };
   },
@@ -23,9 +23,9 @@ const app = new Vue({
       if (docs.length > 1) {
         const { data } = docs[docs.length - 1];
         for (let i = 0; i < data.length; i++) {
-          if (data[i] != "") {
+          if (data[i] !== "") {
             this.clipHistory.push(data[i]);
-            console.log(data[i]);
+            console.log("pushed index " + i + "value" + data[i]);
           }
         }
       }
@@ -35,7 +35,7 @@ const app = new Vue({
     // in main app
     // setInterval(this.insertHistorytoDB, 1800000 );
     // in dev
-    setInterval(this.insertHistorytoDB, 10000);
+    setInterval(this.insertHistorytoDB, 5000);
     setInterval(this.checkClipboard, 1000);
   },
   methods: {
@@ -54,6 +54,9 @@ const app = new Vue({
       this.clipHistory.splice(index, 1);
       clipboard.writeText(item);
       window.scrollTo(0, 0);
+    },
+    deleteAllItems() {
+      this.clipHistory.splice(0, this.clipHistory.length);
     },
   },
 });

@@ -22,7 +22,7 @@ function createWindow() {
       nodeIntegration: true,
     },
   });
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
   mainWindow.hide();
   mainWindow.loadFile("index.html");
 
