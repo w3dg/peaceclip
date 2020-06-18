@@ -40,9 +40,11 @@ const app = new Vue({
   },
   methods: {
     checkClipboard() {
-      const text = clipboard.readText();
-      if (this.clipHistory[this.clipHistory.length - 1] !== text) {
-        this.clipHistory.push(text);
+      if (clipboard.availableFormats()[0].startsWith("text")) {
+        const text = clipboard.readText();
+        if (this.clipHistory[this.clipHistory.length - 1] !== text) {
+          this.clipHistory.push(text);
+        }
       }
     },
 
