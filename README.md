@@ -23,7 +23,7 @@ npm start
 
 #### NOTE: as this is an electron app it comes with its own security. It is recommended that any libraries or frameworks used are downloaded locally rather than from a CDN or anything else which requires network access.
 
-#### :scroll: TODO
+## How did we do that?
 
 - [x] Quickstart from boilerplate
 - [x] Styling Changes for app
@@ -51,11 +51,14 @@ npm start
 ##### Any PRs will be welcome
 
 - [ ] Store copied images in db as well
-      Docs-
 
-  - https://www.electronjs.org/docs/api/clipboard
-  - https://www.electronjs.org/docs/api/clipboard#clipboardreadimagetype
-  - https://www.electronjs.org/docs/api/native-image
+#### This is being handled in a branch `feat-add-images`
+
+Docs-
+
+- https://www.electronjs.org/docs/api/clipboard
+- https://www.electronjs.org/docs/api/clipboard#clipboardreadimagetype
+- https://www.electronjs.org/docs/api/native-image
 
 - [ ] When user clicks on the stuff write it to the input ( just as windows clipboard does ) if possible
 
