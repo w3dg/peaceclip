@@ -1,5 +1,5 @@
-const { clipboard } = require("electron");
-const Datastore = require("nedb"),
+const { clipboard } = electron;
+const Datastore = nedb,
   db = new Datastore({ filename: "peaceclipDatabase.db", autoload: true });
 
 const app = new Vue({
@@ -32,9 +32,6 @@ const app = new Vue({
     });
   },
   mounted() {
-    // in main app
-    // setInterval(this.insertHistorytoDB, 1800000 );
-    // in dev
     setInterval(this.insertHistorytoDB, 5000);
     setInterval(this.checkClipboard, 1000);
   },
