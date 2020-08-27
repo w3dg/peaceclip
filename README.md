@@ -52,8 +52,6 @@ npm start
 
 - [ ] Store copied images in db as well
 
-#### This is being handled in a branch `feat-add-images`
-
 Docs-
 
 - https://www.electronjs.org/docs/api/clipboard
