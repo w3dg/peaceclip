@@ -44,6 +44,11 @@ npm start
   - [x] query for things on start etc.
   - [x] Make a `clear-all` button (wipes the db)
 
+- [x] Add tray icon controls on right click
+
+  - Show
+  - Quit
+
 - [x] When user clicks on the item copy it to their clipboard. and update the view as well.
 
 ## STRETCH

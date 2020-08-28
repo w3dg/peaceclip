@@ -4,10 +4,11 @@ const { app, BrowserWindow, Menu, Tray } = require("electron");
 const path = require("path");
 
 let tray = null;
+let mainWindow;
 
 function createWindow() {
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 400,
     height: 400,
     frame: false,
@@ -35,6 +36,11 @@ function createWindow() {
   });
 }
 
+function showMainWindow() {
+  console.log(mainWindow);
+  mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show();
+}
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
@@ -42,6 +48,15 @@ app.whenReady().then(() => {
   tray = new Tray("./clipboard.png");
   tray.setToolTip("peaceclip");
   createWindow();
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      click: showMainWindow,
+      label: "Show",
+      type: "normal",
+    },
+    { click: app.quit, label: "Quit", type: "normal" },
+  ]);
+  tray.setContextMenu(contextMenu);
   app.on("activate", function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
