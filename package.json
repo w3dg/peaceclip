@@ -14,7 +14,7 @@
   "author": "Debopam Gupta",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^12.0.7"
+    "electron": "^13.1.2"
   },
   "dependencies": {
     "nedb": "^1.8.0"
